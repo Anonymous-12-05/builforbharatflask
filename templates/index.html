@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Amazon Product Objective Score Calculator</h1>
+<form action="{{ url_for('calculate') }}" method="post">
+    <label for="brand_name">Brand Name:</label>
+    <input type="text" id="brand_name" name="brand_name" required>
+    
+    <label for="product_name">Product Name:</label>
+    <input type="text" id="product_name" name="product_name" required>
+    
+    <label for="selling_price">Selling Price:</label>
+    <input type="text" id="selling_price" name="selling_price" required>
+    
+    <label for="image">Image URL:</label>
+    <input type="text" id="image" name="image" required>
+    
+    <label for="product_description">Product Description:</label>
+    <textarea id="product_description" name="product_description" required></textarea>
+    
+    <button type="submit">Calculate Score</button>
+</form>
+{% endblock %}

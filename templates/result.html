@@ -1,0 +1,6 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Objective Score Result</h1>
+<p>Your product's objective score is: <strong>{{ score }}</strong></p>
+<a href="{{ url_for('index') }}">Calculate another score</a>
+{% endblock %}
